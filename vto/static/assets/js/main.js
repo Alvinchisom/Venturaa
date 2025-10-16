@@ -67,7 +67,7 @@
         setTimeout(() => {
           preloader.style.opacity = '0';
           setTimeout(() => preloader.remove(), 800);
-        }, 5000); // preloader visible for 5 seconds
+        }, 4000); // preloader visible for 5 seconds
       });
     }
 
@@ -222,45 +222,4 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const words = [
-    "an Engineer",
-    "a Web Developer",
-    "a Project Manager",
-    "a Content Specialist",
-    "a Data Analyst",
-    "a Cloud Engineer"
-  ];
-
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const speed = 100;      // typing speed (ms)
-  const delay = 1000;     // pause before deleting
-  const element = document.getElementById("typewriter");
-
-  function typeEffect() {
-    const currentWord = words[wordIndex];
-    if (isDeleting) {
-      element.textContent = currentWord.substring(0, charIndex--);
-    } else {
-      element.textContent = currentWord.substring(0, charIndex++);
-    }
-
-    // Continue typing/deleting
-    if (!isDeleting && charIndex === currentWord.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, delay);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      setTimeout(typeEffect, 300);
-    } else {
-      setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
-    }
-  }
-
-  typeEffect();
-});
 
