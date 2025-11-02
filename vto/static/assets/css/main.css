@@ -1299,36 +1299,58 @@ section,
   padding: 40px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   height: 100%;
-}
-
-.services .service-item .icon {
-  width: 48px;
-  height: 48px;
+  text-align: center;
   position: relative;
-  margin-bottom: 50px;
+  overflow: hidden;
 }
 
+/* ICON CONTAINER */
+.services .service-item .icon {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* ICON ITSELF */
 .services .service-item .icon i {
   color: color-mix(in srgb, var(--heading-color), transparent 30%);
-  font-size: 56px;
-  transition: ease-in-out 0.3s;
+  font-size: 50px;
+  transition: transform 0.3s ease, color 0.3s ease;
   z-index: 2;
   position: relative;
 }
 
-.services .service-item .icon:before {
-  position: absolute;
+/* CIRCLE BEHIND ICON */
+.services .service-item .icon::before {
   content: "";
-  height: 100%;
+  position: absolute;
   width: 100%;
-  background: color-mix(in srgb, var(--heading-color), transparent 95%);
-  border-radius: 50px;
+  height: 100%;
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  border-radius: 50%;
   z-index: 1;
-  top: 10px;
-  right: -20px;
-  transition: 0.3s;
+  transform: scale(0);
+  transition: transform 0.4s ease, background 0.4s ease;
 }
 
+/* ON HOVER – Smaller Circle Expansion */
+.services .service-item:hover .icon::before {
+  transform: scale(1.3); /* reduced from 1.6 → 1.3 */
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+/* ON HOVER – Icon Pops Out */
+.services .service-item:hover .icon i {
+  color: var(--heading-color);
+  transform: scale(1.1);
+}
+
+/* HEADINGS & TEXT – Unchanged */
 .services .service-item h3 {
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
   font-weight: 700;
@@ -1353,14 +1375,6 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.services .service-item:hover .icon i {
-  color: var(--heading-color);
-}
-
-.services .service-item:hover .icon:before {
-  background: color-mix(in srgb, var(--accent-color), transparent 50%);
-}
-
 .services .service-item:hover h3 {
   border-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   color: var(--heading-color);
@@ -1369,6 +1383,7 @@ section,
 .services .service-item:hover .readmore {
   color: var(--accent-color);
 }
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -2968,6 +2983,90 @@ section,
 @keyframes blink {
   50% { border-color: transparent; }
 }
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0d0d0d 0%, #000 70%);
+  color: white;
+  overflow: hidden;
+}
+
+/* Add a subtle geometric pattern overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.03) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.03) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.03) 25%, transparent 25%);
+  background-size: 40px 40px;
+  z-index: 0;
+  opacity: 0.80;
+}
+
+/* Text */
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  color: white;
+  text-align: left;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon Bottom-Right */
+.hero-icon {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  font-size: 2rem;
+  color: white;
+  z-index: 2;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-title,
+  .hero-subtitle {
+    font-size: 3.2rem;
+    text-align: left;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-title,
+  .hero-subtitle {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+  .hero-icon {
+    bottom: 20px;
+    right: 25px;
+    font-size: 1.6rem;
+  }
+}
+
+
 
 
 

@@ -2,54 +2,58 @@
 {% load static %}
 {% block content %}
 
-<!-- ===== Hero Section (With Typewriter) ===== -->
-<section id="hero" class="hero section accent-background" style="background:#000; color:white;">
-  <div class="container position-relative py-5" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-5 justify-content-between align-items-center">
+<section id="hero" class="hero section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h1 class="hero-title">Connecting Talent.</h1>
+    <h1 class="hero-subtitle">Powering Possibilities.</h1>
+  </div>
 
-      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-        <h2 style="font-size:2.5rem; font-weight:700;">
-          <span>Hello </span>
-          <span class="accent">VTO</span><br>
-          <span>I’m <span class="typewriter"></span></span>
-        </h2>
-        <p style="color:#dbe9ff;">
-          Empowering global businesses with premier African talent through reliable, tailored, and
-          tech-enabled outsourcing solutions — so you can focus on what you do best.
-        </p>
-      </div>
-
-      <div class="col-lg-5 order-1 order-lg-2 text-center">
-        <i class="bi bi-building-gear" style="font-size: 200px; color: #007bff;"></i> <!-- Business outsourcing -->
-      </div>
-
-    </div>
+  <!-- Icon fixed to bottom-right -->
+  <div class="hero-icon">
+    <i class="bi bi-globe2"></i>
   </div>
 </section>
+
+
+
+<section id="hero-image" style="padding: 0; overflow: hidden;">
+  <img src="{% static 'assets/img/compressed/business-event.jpg' %}"
+       alt="Ventura Talent Outsourcing"
+       style="width: 100%; height: auto; display: block; object-fit: cover;">
+</section>
+
 <!-- ===== End Hero Section ===== -->
 
 <!-- ===== About Section ===== -->
-<section id="about" class="about section">
+<section id="about" class="about section" style="padding: 80px 0;">
   <div class="container">
-    <div class="row gy-4">
+    <div class="row gy-5 align-items-center">
 
+      <!-- Left Text Section -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h5>Standout Features</h5>
-        <h3 style="font-weight:700;">Tech-Driven, Reliable, and Scalable Talent Solutions</h3>
+        <h5 style="text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+          Who We Are
+        </h5>
+        <h3 style="font-weight: 700; line-height: 1.4;">
+          At Ventura Talent Outsourcing, we combine personalized service with our
+          technology-driven processes to deliver flexible, end-to-end talent solutions.
+        </h3>
       </div>
 
+      <!-- Right Text Section -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-        <div class="content ps-0 ps-lg-5">
-        <p>
-          At <strong>Ventura Talent Outsourcing (VTO)</strong>, we combine deep local expertise with global standards
-          to deliver flexible, end-to-end outsourcing and staffing solutions powered by innovation and integrity.
-        </p>
+        <div class="content ps-0 ps-lg-4">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">
+            We empower companies to scale their businesses quickly and cost-efficiently by
+            connecting them with premier, skilled talent across various sectors.
+          </p>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
 <!-- ===== End About Section ===== -->
 
 <!-- ===== Services Section ===== -->
@@ -126,12 +130,7 @@
       <!-- Left Column: How It Works -->
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="content px-xl-5">
-          <h3><strong>HOW IT WORKS</strong></h3>
-            <p>
-              At VTO, we connect top-tier professionals with businesses through a seamless, technology-driven process.
-              From project scoping to delivery, our specialized teams ensure precision, transparency, and results —
-              transforming challenges into opportunities across engineering, web services, publishing, and beyond.
-            </p>
+          <h3><strong>Ready to take the next step?</strong></h3>
           <a href="{% url 'contact' %}" class="custom-btn"><span>Contact Us</span></a>
         </div>
       </div>
