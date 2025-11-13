@@ -25,16 +25,17 @@
           <li><a href="{% url 'about' %}">About Us</a></li>
 
           <!-- Dropdown menu -->
-          <li class="footer-dropdown">
-            <a href="#" class="dropdown-toggle">VTO Features <i class="bi bi-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-               <li><a href="{% url 'service' %}">Services</a></li>
-                <li><a href="{% url 'industries' %}">Industries Served</a></li>
-                <li><a href="{% url 'offer' %}">What we offer</a></li>
-                <li><a href="{% url 'quality' %}">Quality & Complaince</a></li>
-                <li><a href="{% url 'choose' %}">Why choose us</a></li>
-            </ul>
-          </li>
+      <li class="footer-dropdown">
+        <a href="#" class="dropdown-toggle">VTO Features <i class="bi bi-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+           <li><a href="{% url 'service' %}">Our Services</a></li>
+           <li><a href="{% url 'industries' %}">Industries Served</a></li>
+           <li><a href="{% url 'offer' %}">What we offer</a></li>
+           <li><a href="{% url 'quality' %}">Quality & Complaince</a></li>
+           <li><a href="{% url 'choose' %}">Why choose us</a></li>
+        </ul>
+      </li>
+
 
           <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
@@ -70,64 +71,79 @@
 </footer>
 
 <style>
-  /* ===== Footer Styling ===== */
-  #footer {
-    background-color: #0a0f25; /* dark blue close to black */
-    color: #dce4f7; /* soft light text color */
-    padding: 40px 0;
-  }
+/* Clean Footer Dropdown (Fly-out style) */
+.footer-links .footer-dropdown {
+  position: relative;
+}
 
-  #footer a {
-    color: #dce4f7; /* readable link color */
-    text-decoration: none;
-  }
+.footer-links .dropdown-toggle {
+  color: #dce4f7;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
 
-  #footer a:hover {
-    color: #0dcaf0; /* light blue hover */
-  }
+.footer-links .dropdown-toggle:hover {
+  color: #0dcaf0;
+}
 
-  #footer h4 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: 600;
-  }
+.footer-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent */
+  left: 0;    /* Align to the left of the parent */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 8px 15px;
+  list-style: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  min-width: 180px;
+  z-index: 20;
+  backdrop-filter: blur(5px);
+  animation: fadeInDown 0.25s ease forwards;
+}
 
-  /* Dropdown styling */
-  .footer-links .footer-dropdown {
-    position: relative;
+/* Smooth slide-down animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .footer-links .dropdown-toggle {
-    color: #dce4f7;
-    cursor: pointer;
-    display: inline-block;
-  }
+.footer-links .dropdown-menu li {
+  padding: 4px 0;
+}
 
-  .footer-links .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #ffffff; /* white background for dropdown */
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    padding: 10px 15px;
-    margin-top: 5px;
-    list-style: none;
-    z-index: 10;
-  }
+.footer-links .dropdown-menu a {
+  color: #081c34 !important;
+  font-size: 14px;
+  display: block;
+  transition: color 0.3s;
+}
 
-  .footer-links .dropdown-menu a {
-    color: #081c34 !important; /* dark blue text */
-    display: block;
-    padding: 5px 0;
-  }
+.footer-links .dropdown-menu a:hover {
+  color: #0dcaf0 !important;
+}
 
-  .footer-links .dropdown-menu a:hover {
-    color: #3fa9f5 !important; /* light blue hover */
-  }
+/* Show dropdown on hover */
+.footer-links .footer-dropdown:hover .dropdown-menu {
+  display: block;
+}
 
-  /* Show dropdown on hover */
-  .footer-links .footer-dropdown:hover .dropdown-menu {
-    display: block;
+/* Smooth slide-in animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 </style>
