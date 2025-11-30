@@ -1,0 +1,149 @@
+{% load static %}
+<footer id="footer" class="footer accent-background">
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+          <span class="sitename">VTO</span>
+        </a>
+        <p>
+          Ventura Talent Outsourcing (VTO) is a trusted partner in workforce outsourcing and talent management.
+          We deliver staffing, HR, and compliance solutions to help businesses grow.
+        </p>
+        <div class="social-links d-flex mt-4">
+          <a href="https://www.linkedin.com/company/ventura-talent-outsourcing/posts/?feedView=all" target="_blank">
+              <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+
+          <!-- Dropdown menu -->
+      <li class="footer-dropdown">
+        <a href="#" class="dropdown-toggle">VTO Features <i class="bi bi-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+           <li><a href="{% url 'service' %}">Our Services</a></li>
+           <li><a href="{% url 'industries' %}">Industries Served</a></li>
+           <li><a href="{% url 'offer' %}">What we offer</a></li>
+           <li><a href="{% url 'quality' %}">Quality & Complaince</a></li>
+           <li><a href="{% url 'choose' %}">Why choose us</a></li>
+        </ul>
+      </li>
+
+
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="{% url 'service' %}">Talent Sourcing & Recruitment</a></li>
+          <li><a href="{% url 'service' %}">Contract Staffing</a></li>
+          <li><a href="{% url 'service' %}">Payroll & Benefits Administration</a></li>
+          <li><a href="{% url 'service' %}">Managed Remote Teams</a></li>
+          <li><a href="{% url 'service' %}">Training & Upskilling</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=6+Taiwo+Ishola+Street+Lekki+Phase+1+Lagos+Nigeria" target="_blank">
+            <i class="fa-solid fa-location-dot"></i> 6 Taiwo Ishola Street, Lekki Phase 1, Lagos
+        </a>
+        <p>Email:<a href="mailto:admin@vtocompany.com">
+            <i class="icon-mail2"></i> admin@vtocompany.com
+        </a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">2025 vtocompany.com -</strong> <span>All Rights Reserved</span></p>
+  </div>
+</footer>
+
+<style>
+/* Clean Footer Dropdown (Fly-out style) */
+.footer-links .footer-dropdown {
+  position: relative;
+}
+
+.footer-links .dropdown-toggle {
+  color: #dce4f7;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.footer-links .dropdown-toggle:hover {
+  color: #0dcaf0;
+}
+
+.footer-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent */
+  left: 0;    /* Align to the left of the parent */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 8px 15px;
+  list-style: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  min-width: 180px;
+  z-index: 20;
+  backdrop-filter: blur(5px);
+  animation: fadeInDown 0.25s ease forwards;
+}
+
+/* Smooth slide-down animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-links .dropdown-menu li {
+  padding: 4px 0;
+}
+
+.footer-links .dropdown-menu a {
+  color: #081c34 !important;
+  font-size: 14px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.footer-links .dropdown-menu a:hover {
+  color: #0dcaf0 !important;
+}
+
+/* Show dropdown on hover */
+.footer-links .footer-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Smooth slide-in animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>

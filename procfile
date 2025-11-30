@@ -1,0 +1,1 @@
+web: gunicorn vto.wsgi:application --chdir vto

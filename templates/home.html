@@ -1,0 +1,237 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<section id="hero" class="hero section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <h1 class="hero-title">Connecting Talent.</h1>
+    <h1 class="hero-subtitle">Powering Possibilities.</h1>
+  </div>
+
+  <!-- Icon fixed to bottom-right -->
+  <div class="hero-icon">
+    <i class="bi bi-globe2"></i>
+  </div>
+</section>
+
+<section id="hero-image" style="padding: 0; overflow: hidden;">
+  <img src="{% static 'assets/img/business-event.jpg' %}"
+       alt="Ventura Talent Outsourcing"
+       style="width: 100%; height: auto; display: block; object-fit: cover;">
+</section>
+
+<!-- ===== End Hero Section ===== -->
+
+<!-- ===== About Section ===== -->
+<section id="about" class="about section" style="padding: 80px 0;">
+  <div class="container">
+    <div class="row gy-5 align-items-center">
+
+      <!-- Left Text Section -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h5 style="text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+          Who We Are
+        </h5>
+        <h3 style="font-weight: 700; line-height: 1.4;">
+          Ventura Talent Outsourcing is here to help your business grow. We provide flexible,
+          end-to-end talent solutions that combine personalized support with smart, tech driven processes.
+        </h3>
+      </div>
+
+      <!-- Right Text Section -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="content ps-0 ps-lg-4">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">
+            We empower companies to scale their businesses quickly and cost-efficiently by
+            connecting them with premier, skilled talent across various sectors.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== End About Section ===== -->
+
+<!-- ===== Services Section ===== -->
+<section id="services" class="services section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Service Item 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-robot"></i> <!-- AI-powered icon -->
+          </div>
+          <h3>AI POWERED MATCHING ENGINE</h3>
+          <p>Our proprietary algorithm sifts through skills, experience, and cultural fit to surface the best candidates in minutes, not weeks.</p>
+        </div>
+      </div>
+
+      <!-- Service Item 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-graph-up"></i> <!-- Analytics/visibility icon -->
+          </div>
+          <h3>END TO END VISIBILITY</h3>
+          <p>From sourcing to offboarding, every step is tracked in real time via intuitive dashboards and consolidated reports.</p>
+        </div>
+      </div>
+
+      <!-- Service Item 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-clock-history"></i> <!-- Rapid turnaround icon -->
+          </div>
+          <h3>RAPID TURNAROUND & BACK FILL GUARANTEE</h3>
+          <p>We stand behind our placements: average time to fill is just 5 working days, and if a resource needs replacing, we back-fill within 5 days at no extra cost.</p>
+        </div>
+      </div>
+
+      <!-- Service Item 4 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-people"></i> <!-- Flexible engagement icon -->
+          </div>
+          <h3>FLEXIBLE ENGAGEMENT MODELS</h3>
+          <p>Whether you need pay-as-you-go contractors, fixed-term teams, or long-term managed services, we tailor terms and SLAs to your project’s unique demands.</p>
+        </div>
+      </div>
+
+      <!-- Service Item 5 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="bi bi-globe2"></i> <!-- Global reach icon -->
+          </div>
+          <h3>GLOBAL REACH, LOCAL EXPERTISE</h3>
+          <p>We’ve successfully serviced U.S.-based clients—combining deep understanding of local talent markets with international standards of delivery.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== End Services Section ===== -->
+
+
+<!-- ===== Faq Section ===== -->
+<section id="faq" class="faq section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Left Column: How It Works -->
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><strong>Ready to take the next step?</strong></h3>
+          <a href="{% url 'contact' %}" class="custom-btn"><span>Contact Us</span></a>
+        </div>
+      </div>
+
+      <!-- Right Column: FAQ Items -->
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>DISCOVERY & ALIGNMENT</span></h3>
+            <div class="faq-content">
+              <p>We kick things off with an informal conversation exploring your objectives, timelines, and team dynamics to shape the perfect engagement plan.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>TAILORED PROPOSAL</span></h3>
+            <div class="faq-content">
+              <p>Based on our discussion, we craft a clear, customized proposal outlining scope, deliverables, and pricing so you know exactly what to expect.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>SEAMLESS ONBOARDING</span></h3>
+            <div class="faq-content">
+              <p>Once we’re aligned, our team handles everything from contract setup to candidate introductions making sure every detail is in place before work begins.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>CONTINUOUS FEEDBACK LOOP</span></h3>
+            <div class="faq-content">
+              <p>We value open communication, gathering your insights at every stage to fine-tune performance and ensure your satisfaction.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>SMOOTH TRANSITION & WRAP UP</span></h3>
+            <div class="faq-content">
+              <p>As projects conclude or evolve, we provide comprehensive handover notes, conduct final debriefs, and stand ready to support your next chapter. Through every step, our goal is to make outsourcing feel effortless so you can focus on what matters most.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== End Faq Section ===== -->
+
+
+<!-- ===== Clients Section ===== -->
+<section id="clients" class="clients section">
+  <div class="container">
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {"delay": 5000},
+          "slidesPerView": "auto",
+          "pagination": {"el": ".swiper-pagination", "type": "bullets", "clickable": true},
+          "breakpoints": {
+            "320": {"slidesPerView": 2, "spaceBetween": 40},
+            "480": {"slidesPerView": 3, "spaceBetween": 60},
+            "640": {"slidesPerView": 4, "spaceBetween": 80},
+            "992": {"slidesPerView": 6, "spaceBetween": 120}
+          }
+        }
+      </script>
+
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/google.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/shell.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/lu.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/penguin.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/coursera.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/shopify.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static 'assets/img/paypal.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== End Clients Section ===== -->
+
+{% endblock %}
