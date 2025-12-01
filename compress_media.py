@@ -4,7 +4,7 @@ from moviepy import VideoFileClip
 
 # Paths (inside static/assets)
 BASE_DIR = os.path.join("static", "assets")
-IMG_DIR = os.path.join(BASE_DIR, "img")
+IMG_DIR = os.path.join(BASE_DIR, "media")
 VIDEO_DIR = os.path.join(BASE_DIR, "videos")
 OUTPUT_IMG_DIR = os.path.join(IMG_DIR, "compressed")
 OUTPUT_VIDEO_DIR = os.path.join(VIDEO_DIR, "compressed")

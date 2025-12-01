@@ -67,7 +67,7 @@
         setTimeout(() => {
           preloader.style.opacity = '0';
           setTimeout(() => preloader.remove(), 800);
-        }, 4000); // preloader visible for 5 seconds
+        }, 1000); // preloader visible for 5 seconds
       });
     }
 
