@@ -31,8 +31,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'now.sh', 'localhost']
-ALLOWED_HOSTS = ["*", ".railway.app"]
-CSRF_TRUSTED_ORIGINS = ["https://*.railway.app"]
+ALLOWED_HOSTS = ["*", "venturaa-production.up.railway.app/"]
+CSRF_TRUSTED_ORIGINS = ["https://venturaa-production.up.railway.app/"]
 
 
 # Application definition
