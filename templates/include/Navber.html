@@ -32,8 +32,19 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{% url 'home' %}" {% if request.path == home %} class="active" {% endif %}>Home<br></a></li>
+
           <li><a href="{% url 'about' %}" {% if request.path == about %} class="active" {% endif %}>About</a></li>
-          <li class="dropdown"><a href="#"><span>VTO features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+          <!-- VTO FEATURES (highlight if in any dropdown page) -->
+          <li class="dropdown">
+            <a href="#"
+              {% if request.path == service or request.path == industries or request.path == offer or request.path == quality or request.path == choose %}
+                class="active"
+              {% endif %}
+            >
+              <span>VTO features</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+
             <ul>
               <li><a href="{% url 'service' %}" {% if request.path == service %} class="active" {% endif %}>Our Services</a></li>
               <li><a href="{% url 'industries' %}" {% if request.path == industries %} class="active" {% endif %}>Industries Served</a></li>
@@ -42,8 +53,10 @@
               <li><a href="{% url 'choose' %}" {% if request.path == choose %} class="active" {% endif %}>Why choose us</a></li>
             </ul>
           </li>
+
           <li><a href="{% url 'contact' %}" {% if request.path == contact %} class="active" {% endif %}>Contact</a></li>
         </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
