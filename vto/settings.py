@@ -25,14 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-^yc(vou)t3@9d6#pqmblf671e3$jq*-k6@9sl_dppp^@-*dc!g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'now.sh', 'localhost']
-ALLOWED_HOSTS = ["*", "venturaa-production.up.railway.app/"]
-CSRF_TRUSTED_ORIGINS = ["https://venturaa-production.up.railway.app/"]
+ALLOWED_HOSTS = ['*','venturaa-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://venturaa-production.up.railway.app']
 
 
 # Application definition
