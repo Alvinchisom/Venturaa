@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-^yc(vou)t3@9d6#pqmblf671e3$jq*-k6@9sl_dppp^@-*dc!g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['venturaa-production.up.railway.app','vtocompany.com','www.vtocompany.com']
+ALLOWED_HOSTS = ['127.0.0.1','venturaa-production.up.railway.app','vtocompany.com','www.vtocompany.com']
 CSRF_TRUSTED_ORIGINS = ['https://venturaa-production.up.railway.app','https://vtocompany.com','https://www.vtocompany.com']
 
 
